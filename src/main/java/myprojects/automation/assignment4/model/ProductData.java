@@ -55,8 +55,20 @@ public class ProductData {
         return count2;
     }
 
+    public static String convertCountToString(){
+        int i = count2;
+        String count3 = "" + i;
+        return count3;
+    }
+
     public static float price2 = myprojects.automation.assignment4.model.Random.genFloat(1.00, 100.00);
     public static float getPrice2() {
         return price2;
+    }
+
+    public static String convertPricetToString(){
+        float i = price2;
+        String price3 = "" + i;
+        return price3;
     }
 }

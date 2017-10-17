@@ -77,10 +77,11 @@ public class GeneralActions extends BaseScript{
 
         Assert.assertEquals(getConfiguredDriver().findElement(ProductPage.getProductNameInput()).
                 getAttribute("value"), ProductData.name2);
-//        Assert.assertEquals(getConfiguredDriver().findElement(ProductPage.getProductCount()).
-//                getAttribute("value"),ProductData.count2);
-//
-//        Assert.assertEquals(getConfiguredDriver().findElement(ProductPage.getProductPrice()).
-//                getAttribute("value"),ProductData.price2);
+
+        Assert.assertEquals(getConfiguredDriver().findElement(ProductPage.getProductCount()).
+                getAttribute("value"),ProductData.convertCountToString());
+
+        Assert.assertEquals(getConfiguredDriver().findElement(ProductPage.getProductPrice()).
+                getAttribute("value"),ProductData.convertPricetToString());
     }
 }
