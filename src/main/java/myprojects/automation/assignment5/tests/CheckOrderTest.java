@@ -12,7 +12,7 @@ public class CheckOrderTest extends BaseScript {
 
     @Test
     public void createNewOrder(){
-        GeneralActionsShop.shopLoginAction();
+        GeneralActionsShop.openShopAction();
         GeneralActionsShop.navigateToAllProductsPage();
         GeneralActionsShop.openFirstProductPage();
         GeneralActionsShop.addToCartAction();
@@ -22,9 +22,6 @@ public class CheckOrderTest extends BaseScript {
         GeneralActionsShop.fillDeliveryDataAction();
         GeneralActionsShop.fillPaymentDataAction();
         GeneralActionsShop.checkConfirmationOrderDetailsAction();
-        GeneralActionsShop.returnToProductPageAndCheckCountAction();
-
-
-        Reporter.log("Tests Result:");
+        Reporter.log("Tests Results:");
     }
 }

@@ -1,7 +1,6 @@
 package myprojects.automation.shopPages;
 
 import org.openqa.selenium.By;
-
 import java.util.Random;
 
 /**
@@ -45,7 +44,6 @@ public class OrderPage {
     public static int postcode = 18000;
     public static String city = "Черкассы";
     public static String orderConfirmationMessage = "\uE876ВАШ ЗАКАЗ ПОДТВЕРЖДЁН";
-
 
     public static String getFirstName() {
         return firstName;

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
  * Created by PC on 17.10.2017.
  */
 public class ShopLoginPage {
+
     //locators
     private static By loginLink = By.xpath(".//*[@title='Войти в учетную запись']");
     private static By emailInput = By.xpath(".//*[@class='form-control'][@name='email']");

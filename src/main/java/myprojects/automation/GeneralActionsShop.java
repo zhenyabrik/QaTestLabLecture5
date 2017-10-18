@@ -10,13 +10,8 @@ import org.testng.Assert;
  */
 public class GeneralActionsShop extends BaseScript {
 
-    public static void shopLoginAction(){
+    public static void openShopAction(){
         getConfiguredDriver().get(Properties.getBaseUrl());
-//        getConfiguredDriver().findElement(ShopLoginPage.getLoginLink()).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(ShopLoginPage.getEmailInput()));
-//        getConfiguredDriver().findElement(ShopLoginPage.getEmailInput()).sendKeys(Constants.getUserLogin());
-//        getConfiguredDriver().findElement(ShopLoginPage.getPasswordInput()).sendKeys(Constants.getUserPassword());
-//        getConfiguredDriver().findElement(ShopLoginPage.getLoginButton()).click();
         wait.until(ExpectedConditions.elementToBeClickable(MainPage.getMainBlock()));
     }
     public static void navigateToAllProductsPage(){
@@ -74,16 +69,13 @@ public class GeneralActionsShop extends BaseScript {
     public static void checkConfirmationOrderDetailsAction(){
         Assert.assertEquals(getConfiguredDriver().findElement(OrderPage.getOrderConfirmationMessageBlock()).getText(),
                 OrderPage.getOrderConfirmationMessage());
-
-        Assert.assertEquals(getConfiguredDriver().findElement(OrderPage.getConfirmedOrderProductName()).getText(),
-                CartPage.getProductNameValue());
+//        Assert.assertEquals(getConfiguredDriver().findElement(OrderPage.getConfirmedOrderProductName()).getText(),
+//                CartPage.getProductNameValue());
         Assert.assertEquals(getConfiguredDriver().findElement(OrderPage.getConfirmedOrderProductCount()).getText(),
                 CartPage.convertProductCountToString());
         Assert.assertEquals(getConfiguredDriver().findElement(OrderPage.getConfirmedOrderProductPrice()).getText(),
                 CartPage.getProductPriceValue());
     }
     public static void returnToProductPageAndCheckCountAction(){
-        getConfiguredDriver().findElement(ProductsPage.getFirstProductName()).click();
-        wait.until(ExpectedConditions.elementToBeClickable(MainPage.getMainBlock()));
     }
 }

@@ -19,19 +19,11 @@ public class CartPage {
     private static String productNameValue = "Faded Short Sleeve T-shirts";
     private static String productPriceValue = "16,51 ₴";
 
-
     public static String convertProductCountToString(){
         int i = productCountValue;
         String productCountStr = "" + i;
         return productCountStr;
     }
-
-//    public static String convertProductPriceToString(){
-//        double i = productPriceValue;
-//        String productPriceStr = "" + i;
-//        return productPriceStr;
-//    }
-
     public static By getCartBlock() {
         return cartBlock;
     }

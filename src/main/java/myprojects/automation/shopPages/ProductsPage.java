@@ -13,29 +13,23 @@ public class ProductsPage {
 
     private static By addToCartButton = By.cssSelector(".btn.btn-primary.add-to-cart");
     private static By modalWindow = By.cssSelector(".modal-content");
-//    private static By proccedCheckoutButton = By.cssSelector(".btn.btn-primary");
     private static By proccedCheckoutButton = By.xpath(".//*[@id='blockcart-modal']/div/div/div[2]/div/div[2]/div/a");
 
     public static By getProductsBlock() {
         return productsBlock;
     }
-
     public static By getFirstProduct() {
         return firstProduct;
     }
-
     public static By getFirstProductName() {
         return firstProductName;
     }
-
     public static By getAddToCartButton() {
         return addToCartButton;
     }
-
     public static By getModalWindow() {
         return modalWindow;
     }
-
     public static By getProccedCheckoutButton() {
         return proccedCheckoutButton;
     }
