@@ -1,4 +1,4 @@
-package myprojects.automation.pages;
+package myprojects.automation.adminPages;
 
 import org.openqa.selenium.By;
 

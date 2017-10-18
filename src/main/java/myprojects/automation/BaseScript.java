@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class BaseScript {
 
     static WebDriver driver = getDriver();
+    static WebDriverWait wait = new WebDriverWait(getConfiguredDriver(), 5);
 
     @BeforeClass
     private static WebDriver getDriver() {

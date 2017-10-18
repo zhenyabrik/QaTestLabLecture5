@@ -1,9 +1,6 @@
-package myprojects.automation.pages;
+package myprojects.automation.adminPages;
 
-import myprojects.automation.utils.Properties;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 public class LoginPage {
 
@@ -18,10 +15,6 @@ public class LoginPage {
     private static By passwordInput = By.id("passwd");
     private static By loginButton = By.cssSelector(".btn.btn-primary.btn-lg.btn-block.ladda-button");
 
-    //variables
-    private static String login = "webinar.test@gmail.com";
-    private static String password = "Xcg7299bnSmMuRLp9ITw";
-
     //getters
     public static By getEmailInput() {
         return emailInput;
@@ -31,11 +24,5 @@ public class LoginPage {
     }
     public static By getLoginButton() {
         return loginButton;
-    }
-    public static String getLogin() {
-        return login;
-    }
-    public static String getPassword() {
-        return password;
     }
 }

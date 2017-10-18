@@ -2,9 +2,6 @@ package myprojects.automation.assignment2.tests;
 
 import myprojects.automation.BaseScript;
 import myprojects.automation.GeneralActions;
-import myprojects.automation.pages.DashboardPage;
-import myprojects.automation.pages.LoginPage;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
 /**

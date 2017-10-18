@@ -1,9 +1,10 @@
 package myprojects.automation;
 
 import myprojects.automation.assignment4.model.ProductData;
-import myprojects.automation.pages.DashboardPage;
-import myprojects.automation.pages.LoginPage;
-import myprojects.automation.pages.ProductPage;
+import myprojects.automation.adminPages.DashboardPage;
+import myprojects.automation.adminPages.LoginPage;
+import myprojects.automation.adminPages.ProductPage;
+import myprojects.automation.utils.Constants;
 import myprojects.automation.utils.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,13 +15,13 @@ import org.testng.Assert;
 
 public class GeneralActions extends BaseScript{
 
-    static WebDriverWait wait = new WebDriverWait(getConfiguredDriver(), 5);
+//    static WebDriverWait wait = new WebDriverWait(getConfiguredDriver(), 5);
 
     public static void loginAction(){
         getConfiguredDriver().get(Properties.getBaseAdminUrl());
         getConfiguredDriver().findElement(LoginPage.getEmailInput()).isDisplayed();
-        getConfiguredDriver().findElement(LoginPage.getEmailInput()).sendKeys(LoginPage.getLogin());
-        getConfiguredDriver().findElement(LoginPage.getPasswordInput()).sendKeys(LoginPage.getPassword());
+        getConfiguredDriver().findElement(LoginPage.getEmailInput()).sendKeys(Constants.getAdminLogin());
+        getConfiguredDriver().findElement(LoginPage.getPasswordInput()).sendKeys(Constants.getAdminPassword());
         getConfiguredDriver().findElement(LoginPage.getLoginButton()).click();
 //        throw new UnsupportedOperationException();
     }
@@ -53,7 +54,7 @@ public class GeneralActions extends BaseScript{
 //        getConfiguredDriver().findElement(ProductPage.getProductNameInput()).sendKeys(ProductData.generate().getName());
         getConfiguredDriver().findElement(ProductPage.getProductNameInput()).sendKeys(ProductData.getName2());
 
-//        getConfiguredDriver().findElement(ProductPage.getProductCount()).sendKeys(ProductData.generate().getQty().toString());
+//        getConfiguredDriver().findElement(ProductPage.getProductCountValue()).sendKeys(ProductData.generate().getQty().toString());
         getConfiguredDriver().findElement(ProductPage.getProductCount()).sendKeys(String.valueOf(ProductData.getCount2()));
 
         wait.until(ExpectedConditions.elementToBeClickable(ProductPage.getProductPrice()));
